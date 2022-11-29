@@ -1,0 +1,6 @@
+res://addons/node_position_debugger/test_scene.tscn
+res://addons/node_position_debugger/plugin.gd
+res://addons/node_position_debugger/position_info_box.tscn
+res://addons/node_position_debugger/position_info_box_theme.tres
+res://addons/node_position_debugger/config_dock.tscn
+res://addons/node_position_debugger/position_info_overlay.tscn

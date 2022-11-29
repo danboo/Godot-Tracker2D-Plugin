@@ -1,0 +1,15 @@
+0b7126e0c6e86d3ec295a72f5aa6e0bd
+::res://::1669694607
+icon.svg::CompressedTexture2D::2951178447999475697::1669415419::1669415427::1::::<><>::
+::res://addons/::1669416002
+::res://addons/node_position_debugger/::1669654207
+config_dock.gd::GDScript::-1::1669532179::0::1::::<>Control<>::
+config_dock.tscn::PackedScene::8278119799383375929::1669654107::0::1::::<><>::res://addons/node_position_debugger/config_dock.gd
+plugin.cfg::TextFile::-1::1669530575::0::1::::<><>::
+plugin.gd::GDScript::-1::1669612620::0::1::::<>EditorPlugin<>::
+position_info_box.gd::GDScript::-1::1669654207::0::1::::InfoBox<>Control<>::
+position_info_box.tscn::PackedScene::3456895376361205696::1669654207::0::1::::<><>::res://addons/node_position_debugger/position_info_box.gd
+position_info_overlay.gd::GDScript::-1::1669653823::0::1::::<>CanvasLayer<>::
+position_info_overlay.tscn::PackedScene::3079120416545223198::1669654107::0::1::::<><>::res://addons/node_position_debugger/position_info_overlay.gd
+test_scene.gd::GDScript::-1::1669621308::0::1::::<>Node2D<>::
+test_scene.tscn::PackedScene::70802859352310220::1669654107::0::1::::<><>::res://addons/node_position_debugger/test_scene.gd

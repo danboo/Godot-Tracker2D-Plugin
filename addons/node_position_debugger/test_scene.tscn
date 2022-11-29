@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bakd3lqxn3ca"]
+
+[ext_resource type="Script" path="res://addons/node_position_debugger/test_scene.gd" id="1_v0ldv"]
+
+[node name="test_scene" type="Node2D"]
+script = ExtResource("1_v0ldv")
+
+[node name="Node2D" type="Node2D" parent="."]
