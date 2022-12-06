@@ -10,6 +10,7 @@ func _ready():
 	node1.position = Vector2(100,100)
 
 	var tracker : Tracker2D = tracker_scene.instantiate()
+	tracker.display_cross = false
 	node1.add_child( tracker )
 	
 	var node2 = Node2D.new();

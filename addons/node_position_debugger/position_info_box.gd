@@ -2,19 +2,25 @@ extends Control
 
 class_name InfoBox
 
+var _is_cross_visible : bool = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	%main_panel.size = Vector2.ZERO
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 	
 func _draw():
-	draw_line(Vector2(3, 0), Vector2(10, 0), Color.WHITE)
-	draw_line(Vector2(0, 3), Vector2(0, 10), Color.WHITE)
-	draw_line(Vector2(-3, 0), Vector2(-10, 0), Color.WHITE)
-	draw_line(Vector2(0, -3), Vector2(0, -10), Color.WHITE)
+	if _is_cross_visible:
+		draw_line(Vector2(3, 0), Vector2(10, 0), Color.WHITE)
+		draw_line(Vector2(0, 3), Vector2(0, 10), Color.WHITE)
+		draw_line(Vector2(-3, 0), Vector2(-10, 0), Color.WHITE)
+		draw_line(Vector2(0, -3), Vector2(0, -10), Color.WHITE)
+
+func set_cross_visible(value : bool):
+	_is_cross_visible = value
 
 func set_name_visible(value : bool):
 	%name_label.visible = value

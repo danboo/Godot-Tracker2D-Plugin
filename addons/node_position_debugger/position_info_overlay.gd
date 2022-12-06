@@ -5,9 +5,9 @@ const TRACKER_2D_GROUP : String = "tracker_2d_nodes"
 var info_box_scene : PackedScene = preload("res://addons/node_position_debugger/position_info_box.tscn")
 var tracked_nodes : Dictionary = {}
 
-var group_filter : Dictionary = {}
-var class_filter : Dictionary = {}
-var name_filter : Dictionary = {}
+#var group_filter : Dictionary = {}
+#var class_filter : Dictionary = {}
+#var name_filter : Dictionary = {}
 
 func _ready():
 	## connect to node_added signal
@@ -28,6 +28,10 @@ func _process(delta):
 			info_box = tracked_nodes[tracker]
 		else:
 			info_box = info_box_scene.instantiate()
+
+			info_box.set_cross_visible(tracker.display_cross)
+			info_box.set_name_visible(tracker.display_node_name)
+
 			tracked_nodes[tracker] = info_box
 			add_child(info_box)
 
@@ -37,7 +41,6 @@ func _process(delta):
 			* parent.get_canvas_transform() \
 			* parent.global_position
 
-		info_box.set_name_visible(tracker.display_node_name)
 		info_box.set_name_label(parent.name)
 		info_box.set_position_label(parent.position)
 		info_box.set_global_position_label(parent.global_position)
