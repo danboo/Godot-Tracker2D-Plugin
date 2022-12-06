@@ -2,7 +2,7 @@
 extends EditorPlugin
 
 #	marker plugin:
-#		- create a plugin to show node positions at runtime (similar to Marker3D)
+#		- create a Tracker2D node to attach to nodes to be tracked
 #		- choose nodes to render by group, type or name
 #		- creates a global canvas layer to render to
 #		- choose image (cross, dot)
@@ -20,6 +20,7 @@ extends EditorPlugin
 #			- add nodes to canvs layer to track debug nodes in group
 #       - add window, viewport and screen position options
 #       - allow user to track and display arbitrary properties of a node (rename to GodotNodeTracker?)
+##      - use OS.has_feature("standalone") to disable in exported games
 
 var config_dock_scene : PackedScene = preload("res://addons/node_position_debugger/config_dock.tscn")
 var config_dock : Control
@@ -37,6 +38,7 @@ func _enter_tree() -> void:
 	add_autoload_singleton(AUTOLOAD_NAME, "res://addons/node_position_debugger/position_info_overlay.tscn")
 
 func _exit_tree() -> void:
+
 	remove_control_from_docks(config_dock)
 	config_dock.free()
 	

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bo7ybmfwojj7d"]
+
+[node name="filter" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="label" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 26.0
+text = "Name Filters:
+"
+
+[node name="add_input" type="LineEdit" parent="."]
+offset_top = 30.0
+offset_right = 1152.0
+offset_bottom = 61.0
+placeholder_text = "add here"
+
+[node name="delete_button" type="Button" parent="."]
+offset_left = 546.0
+offset_top = 65.0
+offset_right = 605.0
+offset_bottom = 96.0
+size_flags_horizontal = 4
+text = "Delete"
+
+[node name="allow_list" type="ItemList" parent="."]
+offset_top = 100.0
+offset_right = 1152.0
+offset_bottom = 108.0
+select_mode = 1
+auto_height = true

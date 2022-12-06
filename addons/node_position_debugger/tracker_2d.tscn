@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://67ukuffr1ois"]
+
+[ext_resource type="Script" path="res://addons/node_position_debugger/tracker_2d.gd" id="1_yg1mo"]
+
+[node name="Tracker2D" type="Node2D" groups=["tracker_2d_nodes"]]
+script = ExtResource("1_yg1mo")

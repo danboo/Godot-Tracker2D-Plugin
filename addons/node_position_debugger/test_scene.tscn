@@ -5,4 +5,4 @@
 [node name="test_scene" type="Node2D"]
 script = ExtResource("1_v0ldv")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="tracked_node" type="Node2D" parent="."]

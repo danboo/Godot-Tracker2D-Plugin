@@ -13,9 +13,15 @@ _global_script_classes=[{
 "class": &"InfoBox",
 "language": &"GDScript",
 "path": "res://addons/node_position_debugger/position_info_box.gd"
+}, {
+"base": "Node2D",
+"class": &"Tracker2D",
+"language": &"GDScript",
+"path": "res://addons/node_position_debugger/tracker_2d.gd"
 }]
 _global_script_class_icons={
-"InfoBox": ""
+"InfoBox": "",
+"Tracker2D": ""
 }
 
 [application]
