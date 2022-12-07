@@ -29,8 +29,16 @@ func _process(delta):
 		else:
 			info_box = info_box_scene.instantiate()
 
+			## set visibility of desired info
 			info_box.set_cross_visible(tracker.display_cross)
 			info_box.set_name_visible(tracker.display_node_name)
+			info_box.set_position_visible(tracker.display_position)
+			info_box.set_global_position_visible(tracker.display_global_position)
+			info_box.set_position_decimals(tracker.position_decimals)
+			info_box.set_rotation_visible(tracker.display_rotation)
+			info_box.set_global_rotation_visible(tracker.display_global_rotation)
+			info_box.set_rotation_decimals(tracker.rotation_decimals)
+			info_box.set_rotation_units(tracker.rotation_units)
 
 			tracked_nodes[tracker] = info_box
 			add_child(info_box)
@@ -41,9 +49,11 @@ func _process(delta):
 			* parent.get_canvas_transform() \
 			* parent.global_position
 
-		info_box.set_name_label(parent.name)
-		info_box.set_position_label(parent.position)
-		info_box.set_global_position_label(parent.global_position)
+		info_box.set_name_value(parent.name)
+		info_box.set_position_value(parent.position)
+		info_box.set_global_position_value(parent.global_position)
+		info_box.set_rotation_value(parent.rotation)
+		info_box.set_global_rotation_value(parent.global_rotation)
 
 	## remove tracked nodes that weren't seen in the group
 	for node in tracked_nodes:

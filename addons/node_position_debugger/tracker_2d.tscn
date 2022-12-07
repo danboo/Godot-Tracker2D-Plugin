@@ -4,3 +4,4 @@
 
 [node name="Tracker2D" type="Node2D" groups=["tracker_2d_nodes"]]
 script = ExtResource("1_yg1mo")
+rotation_units = 1

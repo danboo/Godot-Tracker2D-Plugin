@@ -15,14 +15,14 @@ script = ExtResource("1_jt23q")
 
 [node name="main_panel" type="PanelContainer" parent="."]
 unique_name_in_owner = true
-layout_mode = 1
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 104.0
 offset_bottom = 68.0
 
 [node name="MarginContainer" type="MarginContainer" parent="main_panel"]
-layout_mode = 2
+offset_right = 119.0
+offset_bottom = 89.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_constants/margin_left = 5
@@ -31,40 +31,100 @@ theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="main_panel/MarginContainer"]
-layout_mode = 2
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 114.0
+offset_bottom = 84.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="name_label" type="Label" parent="main_panel/MarginContainer/VBoxContainer"]
+[node name="name_value" type="Label" parent="main_panel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
-layout_mode = 2
+offset_right = 109.0
+offset_bottom = 11.0
 text = "node_name"
 horizontal_alignment = 1
 
 [node name="name_separator" type="HSeparator" parent="main_panel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
-layout_mode = 2
+offset_top = 15.0
+offset_right = 109.0
+offset_bottom = 15.0
 
 [node name="GridContainer" type="GridContainer" parent="main_panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
+offset_top = 19.0
+offset_right = 109.0
+offset_bottom = 45.0
 columns = 2
-
-[node name="Label" type="Label" parent="main_panel/MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-text = "pos:"
-horizontal_alignment = 2
 
 [node name="position_label" type="Label" parent="main_panel/MarginContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
-layout_mode = 2
-text = "-123.0, 543.2"
-
-[node name="Label3" type="Label" parent="main_panel/MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-text = "gpos:"
+offset_right = 33.0
+offset_bottom = 11.0
+text = "pos:"
 horizontal_alignment = 2
+
+[node name="position_value" type="Label" parent="main_panel/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+offset_left = 37.0
+offset_right = 109.0
+offset_bottom = 11.0
+text = "-123.0, 543.2"
 
 [node name="global_position_label" type="Label" parent="main_panel/MarginContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
-layout_mode = 2
+offset_top = 15.0
+offset_right = 33.0
+offset_bottom = 26.0
+text = "g-pos:"
+horizontal_alignment = 2
+
+[node name="global_position_value" type="Label" parent="main_panel/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+offset_left = 37.0
+offset_top = 15.0
+offset_right = 109.0
+offset_bottom = 26.0
 text = "-111.1, 111.1"
+
+[node name="name_separator2" type="HSeparator" parent="main_panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+offset_top = 49.0
+offset_right = 109.0
+offset_bottom = 49.0
+
+[node name="GridContainer2" type="GridContainer" parent="main_panel/MarginContainer/VBoxContainer"]
+offset_top = 53.0
+offset_right = 109.0
+offset_bottom = 79.0
+columns = 2
+
+[node name="rotation_label" type="Label" parent="main_panel/MarginContainer/VBoxContainer/GridContainer2"]
+unique_name_in_owner = true
+offset_right = 33.0
+offset_bottom = 11.0
+text = "rot:"
+horizontal_alignment = 2
+
+[node name="rotation_value" type="Label" parent="main_panel/MarginContainer/VBoxContainer/GridContainer2"]
+unique_name_in_owner = true
+offset_left = 37.0
+offset_right = 70.0
+offset_bottom = 11.0
+text = "-123.0"
+
+[node name="global_rotation_label" type="Label" parent="main_panel/MarginContainer/VBoxContainer/GridContainer2"]
+unique_name_in_owner = true
+offset_top = 15.0
+offset_right = 33.0
+offset_bottom = 26.0
+text = "g-rot:"
+horizontal_alignment = 2
+
+[node name="global_rotation_value" type="Label" parent="main_panel/MarginContainer/VBoxContainer/GridContainer2"]
+unique_name_in_owner = true
+offset_left = 37.0
+offset_top = 15.0
+offset_right = 70.0
+offset_bottom = 26.0
+text = "-123.0"
