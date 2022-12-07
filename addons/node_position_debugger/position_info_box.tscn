@@ -22,7 +22,7 @@ offset_bottom = 68.0
 
 [node name="MarginContainer" type="MarginContainer" parent="main_panel"]
 offset_right = 119.0
-offset_bottom = 89.0
+offset_bottom = 97.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_constants/margin_left = 5
@@ -34,7 +34,7 @@ theme_override_constants/margin_bottom = 5
 offset_left = 5.0
 offset_top = 5.0
 offset_right = 114.0
-offset_bottom = 84.0
+offset_bottom = 92.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
@@ -128,3 +128,15 @@ offset_top = 15.0
 offset_right = 70.0
 offset_bottom = 26.0
 text = "-123.0"
+
+[node name="name_separator3" type="HSeparator" parent="main_panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+offset_top = 83.0
+offset_right = 109.0
+offset_bottom = 83.0
+
+[node name="tracked_properties" type="VBoxContainer" parent="main_panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+offset_top = 87.0
+offset_right = 109.0
+offset_bottom = 87.0

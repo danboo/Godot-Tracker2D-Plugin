@@ -20,7 +20,8 @@ extends EditorPlugin
 #			- add nodes to canvs layer to track debug nodes in group
 #       - add window, viewport and screen position options
 #       - allow user to track and display arbitrary properties of a node (rename to GodotNodeTracker?)
-##      - use OS.has_feature("standalone") to disable in exported games
+#      - use OS.has_feature("standalone") to disable in exported games
+#		- update info based on timer or per frame
 
 var config_dock_scene : PackedScene = preload("res://addons/node_position_debugger/config_dock.tscn")
 var config_dock : Control

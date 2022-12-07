@@ -21,7 +21,7 @@ enum ROTATION_UNITS { Radians, Degrees }
 @export var display_node_name : bool = true
 @export var display_cross : bool = true
 @export var display_bounding_box : bool = true
-@export var tracked_node_properties : Array[String]
+@export var tracked_properties : Array[String]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -6,6 +6,7 @@ var _is_cross_visible : bool = true
 var _position_decimals : int = 1
 var _rotation_decimals : int = 1
 var _rotation_units : int = Tracker2D.ROTATION_UNITS.Radians
+var _tracked_properties : Array[String] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,6 +22,11 @@ func _draw() -> void:
 		draw_line(Vector2(0, 3), Vector2(0, 10), Color.WHITE)
 		draw_line(Vector2(-3, 0), Vector2(-10, 0), Color.WHITE)
 		draw_line(Vector2(0, -3), Vector2(0, -10), Color.WHITE)
+
+func set_tracked_properties(value : Array[String]) -> void:
+	_tracked_properties = value
+	for property in _tracked_properties:
+		%tracked_properties.add_child( Label.new() )
 
 func set_rotation_units(value : int) -> void:
 	_rotation_units = value
@@ -68,6 +74,10 @@ func set_rotation_value( value : float ) -> void:
 
 func set_global_rotation_value( value : float ) -> void:
 	%global_rotation_value.text = _format_rotation(value)
+
+func update_tracked_properties( parent : Node ) -> void:
+	for i in _tracked_properties.size():
+		%tracked_properties.get_child(i).text = str( _tracked_properties[i], ": ", parent.get( _tracked_properties[i] ) )
 
 func _format_position( vec2 : Vector2 ) -> String:
 	var format_string = str('%.0', _position_decimals, 'f')

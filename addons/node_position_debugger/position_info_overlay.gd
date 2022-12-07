@@ -39,6 +39,7 @@ func _process(delta):
 			info_box.set_global_rotation_visible(tracker.display_global_rotation)
 			info_box.set_rotation_decimals(tracker.rotation_decimals)
 			info_box.set_rotation_units(tracker.rotation_units)
+			info_box.set_tracked_properties(tracker.tracked_properties)
 
 			tracked_nodes[tracker] = info_box
 			add_child(info_box)
@@ -54,6 +55,7 @@ func _process(delta):
 		info_box.set_global_position_value(parent.global_position)
 		info_box.set_rotation_value(parent.rotation)
 		info_box.set_global_rotation_value(parent.global_rotation)
+		info_box.update_tracked_properties(parent)
 
 	## remove tracked nodes that weren't seen in the group
 	for node in tracked_nodes:
