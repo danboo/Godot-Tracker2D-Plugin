@@ -2,7 +2,7 @@ extends CanvasLayer
 
 const TRACKER_2D_GROUP : String = "tracker_2d_nodes"
 
-var info_box_scene : PackedScene = preload("res://addons/node_position_debugger/position_info_box.tscn")
+var info_box_scene : PackedScene = preload("position_info_box.tscn")
 var tracked_nodes : Dictionary = {}
 
 #var group_filter : Dictionary = {}

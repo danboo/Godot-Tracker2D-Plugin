@@ -1,6 +1,6 @@
 extends Node2D
 
-var tracker_scene : PackedScene = preload("res://addons/node_position_debugger/tracker_2d.tscn")
+var tracker_scene : PackedScene = preload("tracker_2d.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

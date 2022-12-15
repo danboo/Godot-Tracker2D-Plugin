@@ -2,7 +2,6 @@
 extends EditorPlugin
 
 #	Tracker2D plugin:
-#		- rename project to Godot-Tracker2D
 #		- choose nodes to render by group, type or name
 #		- choose image (cross, dot)
 #		- toggle display node name

@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpistdoud3sg3"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Theme" uid="uid://jqhxocgoy8gg" path="res://addons/node_position_debugger/position_info_box_theme.tres" id="1_j3wqo"]
-[ext_resource type="Script" path="res://addons/node_position_debugger/position_info_box.gd" id="1_jt23q"]
+[ext_resource type="Theme" uid="uid://jqhxocgoy8gg" path="res://addons/Tracker2D/position_info_box_theme.tres" id="1_j3wqo"]
+[ext_resource type="Script" path="res://addons/Tracker2D/position_info_box.gd" id="1_jt23q"]
 
 [node name="position_info_box" type="Control"]
 layout_mode = 3

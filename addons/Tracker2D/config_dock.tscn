@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp68on0bjqqaj"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://addons/node_position_debugger/config_dock.gd" id="1_ad432"]
-[ext_resource type="PackedScene" uid="uid://bo7ybmfwojj7d" path="res://addons/node_position_debugger/filter_manager.tscn" id="2_k5ini"]
+[ext_resource type="Script" path="res://addons/Tracker2D/config_dock.gd" id="1_ad432"]
+[ext_resource type="PackedScene" uid="uid://bo7ybmfwojj7d" path="res://addons/Tracker2D/filter_manager.tscn" id="2_k5ini"]
 
 [node name="config_dock" type="Control"]
 layout_mode = 3

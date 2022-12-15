@@ -1,14 +1,23 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
 config_version=5
+
 _global_script_classes=[{
 "base": "Control",
 "class": &"InfoBox",
 "language": &"GDScript",
-"path": "res://addons/node_position_debugger/position_info_box.gd"
+"path": "res://addons/Tracker2D/position_info_box.gd"
 }, {
 "base": "Node2D",
 "class": &"Tracker2D",
 "language": &"GDScript",
-"path": "res://addons/node_position_debugger/tracker_2d.gd"
+"path": "res://addons/Tracker2D/tracker_2d.gd"
 }]
 _global_script_class_icons={
 "InfoBox": "",
@@ -18,13 +27,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot-Tracker2D-Plugin"
-run/main_scene="res://addons/node_position_debugger/test_scene.tscn"
+run/main_scene="res://addons/Tracker2D/test_scene.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-PositionDebuggerOverlay="*res://addons/node_position_debugger/position_info_overlay.tscn"
+PositionDebuggerOverlay="*res://addons/Tracker2D/position_info_overlay.tscn"
 
 [editor_plugins]
 
