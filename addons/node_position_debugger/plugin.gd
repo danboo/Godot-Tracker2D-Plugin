@@ -1,26 +1,15 @@
 @tool
 extends EditorPlugin
 
-#	marker plugin:
-#		- create a Tracker2D node to attach to nodes to be tracked
+#	Tracker2D plugin:
+#		- rename project to Godot-Tracker2D
 #		- choose nodes to render by group, type or name
-#		- creates a global canvas layer to render to
 #		- choose image (cross, dot)
-#		- toggle show position as text
-#			- choose font / size
-#			- choose decimals
 #		- toggle display node name
 #			- choose font / size
-#		- draw line length relative to camera zoom
 #		- use _edit_use_rect and _edit_get_rect to draw a bounding box
-#		- use SceneTree.node_added signal to track nodes by class
-#			- as they are added add them to a group
-#		- addon conversion ideas
-#			- render to a single CanvasLayer
-#			- add nodes to canvs layer to track debug nodes in group
-#       - add window, viewport and screen position options
-#       - allow user to track and display arbitrary properties of a node (rename to GodotNodeTracker?)
-#      - use OS.has_feature("standalone") to disable in exported games
+#		- add window, viewport and screen position options
+#		- use OS.has_feature("standalone") to disable in exported games
 #		- update info based on timer or per frame
 
 var config_dock_scene : PackedScene = preload("res://addons/node_position_debugger/config_dock.tscn")
