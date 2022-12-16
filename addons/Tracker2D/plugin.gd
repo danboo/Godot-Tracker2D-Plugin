@@ -24,7 +24,7 @@ func _enter_tree() -> void:
 	add_control_to_dock(DockSlot.DOCK_SLOT_LEFT_UR, config_dock)
 	
 	## add position overlay singleton
-	add_autoload_singleton(AUTOLOAD_NAME, "position_info_overlay.tscn")
+	add_autoload_singleton(AUTOLOAD_NAME, "res://addons/Tracker2D/position_info_overlay.tscn")
 
 func _exit_tree() -> void:
 

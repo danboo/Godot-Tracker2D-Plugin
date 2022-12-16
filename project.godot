@@ -34,6 +34,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 PositionDebuggerOverlay="*res://addons/Tracker2D/position_info_overlay.tscn"
+Tracker2D_Overlay="*res://addons/Tracker2D/position_info_overlay.tscn"
 
 [editor_plugins]
 
