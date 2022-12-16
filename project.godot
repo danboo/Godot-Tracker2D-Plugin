@@ -37,4 +37,4 @@ PositionDebuggerOverlay="*res://addons/Tracker2D/position_info_overlay.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/node_position_debugger/plugin.cfg")
+enabled=PackedStringArray("res://addons/Tracker2D/plugin.cfg")

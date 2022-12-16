@@ -2,7 +2,7 @@
 extends EditorPlugin
 
 #	Tracker2D plugin:
-#		- choose nodes to render by group, type or name
+#		- auto-add Tracker2D based on by group, type or name
 #		- choose image (cross, dot)
 #		- toggle display node name
 #			- choose font / size
@@ -11,20 +11,20 @@ extends EditorPlugin
 #		- use OS.has_feature("standalone") to disable in exported games
 #		- update info based on timer or per frame
 
-var config_dock_scene : PackedScene = preload("res://addons/node_position_debugger/config_dock.tscn")
+var config_dock_scene : PackedScene = preload("config_dock.tscn")
 var config_dock : Control
 
-const AUTOLOAD_NAME :  String = "PositionDebuggerOverlay"
+const AUTOLOAD_NAME :  String = "Tracker2D_Overlay"
 
 func _enter_tree() -> void:
 	
 	## add configuration dock
 	config_dock = config_dock_scene.instantiate()
-	config_dock.name = "PositionDebugger"
+	config_dock.name = "Tracker2D"
 	add_control_to_dock(DockSlot.DOCK_SLOT_LEFT_UR, config_dock)
 	
 	## add position overlay singleton
-	add_autoload_singleton(AUTOLOAD_NAME, "res://addons/node_position_debugger/position_info_overlay.tscn")
+	add_autoload_singleton(AUTOLOAD_NAME, "position_info_overlay.tscn")
 
 func _exit_tree() -> void:
 
