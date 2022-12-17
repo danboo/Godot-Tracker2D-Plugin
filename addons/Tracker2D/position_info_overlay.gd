@@ -30,7 +30,6 @@ func _process(delta):
 			info_box = info_box_scene.instantiate()
 
 			## set visibility of desired info
-			info_box.set_cross_visible(tracker.display_cross)
 			info_box.set_name_visible(tracker.display_node_name)
 			info_box.set_position_visible(tracker.display_position)
 			info_box.set_global_position_visible(tracker.display_global_position)

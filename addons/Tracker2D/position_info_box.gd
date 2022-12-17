@@ -2,12 +2,12 @@ extends Control
 
 class_name InfoBox
 
-var _is_cross_visible : bool = true
 var _market_style : int = Tracker2D.MARKER_STYLE.Cross
 var _position_decimals : int = 1
 var _rotation_decimals : int = 1
 var _rotation_units : int = Tracker2D.ROTATION_UNITS.Radians
 var _tracked_properties : Array[String] = []
+var _display_rect : bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +15,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
-	pass
+	if _display_rect && _edit_use_rect():
+		pass
 	
 func _draw() -> void:
 	match _market_style:
@@ -40,6 +41,9 @@ func _draw_cross() -> void:
 	draw_line(Vector2(-3, 0), Vector2(-10, 0), Color.WHITE)
 	draw_line(Vector2(0, -3), Vector2(0, -10), Color.WHITE)
 
+func set_display_rect(value: bool) -> void:
+	_display_rect = value
+
 func set_marker_style(value : Tracker2D.MARKER_STYLE) -> void:
 	_market_style = value
 
@@ -56,9 +60,6 @@ func set_rotation_decimals(value : int) -> void:
 
 func set_position_decimals(value : int) -> void:
 	_position_decimals = value
-
-func set_cross_visible(value : bool) -> void:
-	_is_cross_visible = value
 
 func set_name_visible(value : bool) -> void:
 	%name_value.visible = value

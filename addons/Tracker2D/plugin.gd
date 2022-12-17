@@ -3,13 +3,13 @@ extends EditorPlugin
 
 #	Tracker2D plugin:
 #		- auto-add Tracker2D based on by group, type or name
-#		- choose image (cross, dot, circle)
-#		- toggle display node name
-#			- choose font / size
 #		- use _edit_use_rect and _edit_get_rect to draw a bounding box
 #		- add window, viewport and screen position options
 #		- use OS.has_feature("standalone") to disable in exported games
 #		- update info based on timer or per frame
+#       - should Tracker2D just get a reference to a position_info_box.gd?
+#			- use _ready and exit tree to handle adding and removing positin_info_box.gd
+#		- add option to keep info boxes in viewport (change BG color when tracked origin is outside viewport)
 
 var config_dock_scene : PackedScene = preload("config_dock.tscn")
 var config_dock : Control

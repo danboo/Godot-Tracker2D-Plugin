@@ -10,7 +10,6 @@ func _ready():
 	node1.position = Vector2(100,100)
 
 	var tracker : Tracker2D = tracker_scene.instantiate()
-	tracker.display_cross = false
 	node1.add_child( tracker )
 	
 	var node2 = Node2D.new();
@@ -26,12 +25,16 @@ func _ready():
 	var node4 = Marker2D.new();
 	node4.name = "Invisible Class"
 	add_child( node4 );
-	node3.position = Vector2(-100,100)
+	node4.position = Vector2(-100,100)
 
 	var node5 = Node2D.new();
 	node5.name = "Should Be Invisible"
 	add_child( node5 );
-	node3.position = Vector2(100,-100)
+	node5.position = Vector2(100,-100)
+
+	var sprite_tracker : Tracker2D = tracker_scene.instantiate()
+	$sprite.add_child( sprite_tracker )
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

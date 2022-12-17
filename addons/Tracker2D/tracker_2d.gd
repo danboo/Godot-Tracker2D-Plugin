@@ -20,10 +20,11 @@ enum ROTATION_UNITS { Radians, Degrees }
 
 @export_group("", "")
 @export var display_node_name : bool = true
-@export var display_cross : bool = true
 @export var marker_style : MARKER_STYLE = MARKER_STYLE.Cross
-@export var display_bounding_box : bool = true
+@export var display_rect : bool = true
 @export var tracked_properties : Array[String]
+
+@onready var _parent : Node = get_parent()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
