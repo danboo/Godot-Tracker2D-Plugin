@@ -3,6 +3,7 @@ extends Control
 class_name InfoBox
 
 var _is_cross_visible : bool = true
+var _market_style : int = Tracker2D.MARKER_STYLE.Cross
 var _position_decimals : int = 1
 var _rotation_decimals : int = 1
 var _rotation_units : int = Tracker2D.ROTATION_UNITS.Radians
@@ -17,11 +18,30 @@ func _process(delta) -> void:
 	pass
 	
 func _draw() -> void:
-	if _is_cross_visible:
-		draw_line(Vector2(3, 0), Vector2(10, 0), Color.WHITE)
-		draw_line(Vector2(0, 3), Vector2(0, 10), Color.WHITE)
-		draw_line(Vector2(-3, 0), Vector2(-10, 0), Color.WHITE)
-		draw_line(Vector2(0, -3), Vector2(0, -10), Color.WHITE)
+	match _market_style:
+		Tracker2D.MARKER_STYLE.Cross:
+			_draw_cross()
+		Tracker2D.MARKER_STYLE.Point:
+			_draw_point()
+		Tracker2D.MARKER_STYLE.Circle:
+			_draw_empty_circle()
+		Tracker2D.MARKER_STYLE.None:
+			pass
+
+func _draw_point() -> void:
+	draw_circle(Vector2.ZERO, 2, Color.WHITE)
+
+func _draw_empty_circle() -> void:
+	draw_arc(Vector2.ZERO, 4, 0, TAU, 32, Color.WHITE)
+
+func _draw_cross() -> void:
+	draw_line(Vector2(3, 0), Vector2(10, 0), Color.WHITE)
+	draw_line(Vector2(0, 3), Vector2(0, 10), Color.WHITE)
+	draw_line(Vector2(-3, 0), Vector2(-10, 0), Color.WHITE)
+	draw_line(Vector2(0, -3), Vector2(0, -10), Color.WHITE)
+
+func set_marker_style(value : Tracker2D.MARKER_STYLE) -> void:
+	_market_style = value
 
 func set_tracked_properties(value : Array[String]) -> void:
 	_tracked_properties = value

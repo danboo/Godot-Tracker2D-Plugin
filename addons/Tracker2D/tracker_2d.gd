@@ -1,6 +1,7 @@
 extends Node2D
 class_name Tracker2D
 
+enum MARKER_STYLE { Cross, Point, Circle, None }
 enum ROTATION_UNITS { Radians, Degrees }
 
 @export_group("Position")
@@ -14,12 +15,13 @@ enum ROTATION_UNITS { Radians, Degrees }
 @export_group("Rotation")
 @export var display_rotation : bool = true
 @export var display_global_rotation : bool = true
-@export var rotation_units : ROTATION_UNITS = 0
+@export var rotation_units : ROTATION_UNITS = ROTATION_UNITS.Radians
 @export_range(0, 9, 1) var rotation_decimals : int = 1
 
 @export_group("", "")
 @export var display_node_name : bool = true
 @export var display_cross : bool = true
+@export var marker_style : MARKER_STYLE = MARKER_STYLE.Cross
 @export var display_bounding_box : bool = true
 @export var tracked_properties : Array[String]
 

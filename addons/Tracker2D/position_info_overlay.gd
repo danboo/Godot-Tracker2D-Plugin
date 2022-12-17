@@ -40,6 +40,7 @@ func _process(delta):
 			info_box.set_rotation_decimals(tracker.rotation_decimals)
 			info_box.set_rotation_units(tracker.rotation_units)
 			info_box.set_tracked_properties(tracker.tracked_properties)
+			info_box.set_marker_style(tracker.marker_style)
 
 			tracked_nodes[tracker] = info_box
 			add_child(info_box)

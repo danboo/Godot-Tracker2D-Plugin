@@ -3,7 +3,7 @@ extends EditorPlugin
 
 #	Tracker2D plugin:
 #		- auto-add Tracker2D based on by group, type or name
-#		- choose image (cross, dot)
+#		- choose image (cross, dot, circle)
 #		- toggle display node name
 #			- choose font / size
 #		- use _edit_use_rect and _edit_get_rect to draw a bounding box
