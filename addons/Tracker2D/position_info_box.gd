@@ -77,7 +77,9 @@ func set_marker_style(value : Tracker2D.MARKER_STYLE) -> void:
 func set_tracked_properties(value : Array[String]) -> void:
 	_tracked_properties = value
 	for property in _tracked_properties:
-		%tracked_properties.add_child( Label.new() )
+		var property_label : Label = Label.new()
+		property_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		%tracked_properties.add_child( property_label )
 
 func set_rotation_units(value : int) -> void:
 	_rotation_units = value
