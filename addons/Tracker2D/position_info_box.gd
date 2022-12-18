@@ -2,6 +2,8 @@ extends Control
 
 class_name InfoBox
 
+var _tracker : Tracker2D
+var _parent : Node2D
 var _market_style : int = Tracker2D.MARKER_STYLE.Cross
 var _position_decimals : int = 1
 var _rotation_decimals : int = 1
@@ -12,11 +14,32 @@ var _display_rect : bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	%main_panel.size = Vector2.ZERO
+	set_name_visible(_tracker.display_node_name)
+	set_position_visible(_tracker.display_position)
+	set_global_position_visible(_tracker.display_global_position)
+	set_position_decimals(_tracker.position_decimals)
+	set_rotation_visible(_tracker.display_rotation)
+	set_global_rotation_visible(_tracker.display_global_rotation)
+	set_rotation_decimals(_tracker.rotation_decimals)
+	set_rotation_units(_tracker.rotation_units)
+	set_tracked_properties(_tracker.tracked_properties)
+	set_marker_style(_tracker.marker_style)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
 	if _display_rect && _edit_use_rect():
 		pass
+
+	global_position = get_canvas_transform().affine_inverse() \
+		* _parent.get_canvas_transform() \
+		* _parent.global_position
+
+	set_name_value(_parent.name)
+	set_position_value(_parent.position)
+	set_global_position_value(_parent.global_position)
+	set_rotation_value(_parent.rotation)
+	set_global_rotation_value(_parent.global_rotation)
+	update_tracked_properties(_parent)
 	
 func _draw() -> void:
 	match _market_style:
@@ -41,7 +64,11 @@ func _draw_cross() -> void:
 	draw_line(Vector2(-3, 0), Vector2(-10, 0), Color.WHITE)
 	draw_line(Vector2(0, -3), Vector2(0, -10), Color.WHITE)
 
-func set_display_rect(value: bool) -> void:
+func set_tracker(value : Tracker2D) -> void:
+	_tracker = value
+	_parent = _tracker.get_parent()
+
+func set_display_rect(value : bool) -> void:
 	_display_rect = value
 
 func set_marker_style(value : Tracker2D.MARKER_STYLE) -> void:

@@ -1,6 +1,8 @@
 extends Node2D
 class_name Tracker2D
 
+var info_box_scene : PackedScene = preload("position_info_box.tscn")
+
 enum MARKER_STYLE { Cross, Point, Circle, None }
 enum ROTATION_UNITS { Radians, Degrees }
 
@@ -28,7 +30,10 @@ enum ROTATION_UNITS { Radians, Degrees }
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Tracker2D_Overlay.add_info_box( self )
+	## give it a reference to tracker and parent
+	## add it to the overlay
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
