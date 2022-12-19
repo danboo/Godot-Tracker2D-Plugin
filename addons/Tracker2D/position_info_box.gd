@@ -34,12 +34,12 @@ func _process(delta) -> void:
 		* _parent.get_canvas_transform() \
 		* _parent.global_position
 
-	set_name_value(_parent.name)
-	set_position_value(_parent.position)
-	set_global_position_value(_parent.global_position)
-	set_rotation_value(_parent.rotation)
-	set_global_rotation_value(_parent.global_rotation)
-	update_tracked_properties(_parent)
+	update_name_value()
+	update_position_value()
+	update_global_position_value()
+	update_rotation_value()
+	update_global_rotation_value()
+	update_tracked_properties()
 	
 func _draw() -> void:
 	match _market_style:
@@ -110,24 +110,25 @@ func set_global_rotation_visible(value : bool) -> void:
 	%global_rotation_label.visible = value
 	%global_rotation_value.visible = value
 
-func set_name_value( value : String ) -> void:
-	%name_value.text = value
+func update_name_value() -> void:
+	%name_value.text = _parent.name
 
-func set_position_value( value : Vector2 ) -> void:
-	%position_value.text = _format_position(value)
+func update_position_value() -> void:
+	%position_value.text = _format_position(_parent.position)
 
-func set_global_position_value( value : Vector2 ) -> void:
-	%global_position_value.text = _format_position(value)
+func update_global_position_value() -> void:
+	%global_position_value.text = _format_position(_parent.global_position)
 
-func set_rotation_value( value : float ) -> void:
-	%rotation_value.text = _format_rotation(value)
+func update_rotation_value() -> void:
+	%rotation_value.text = _format_rotation(_parent.rotation)
 
-func set_global_rotation_value( value : float ) -> void:
-	%global_rotation_value.text = _format_rotation(value)
+func update_global_rotation_value() -> void:
+	%global_rotation_value.text = _format_rotation(_parent.global_rotation)
 
-func update_tracked_properties( parent : Node ) -> void:
+func update_tracked_properties() -> void:
 	for i in _tracked_properties.size():
-		%tracked_properties.get_child(i).text = str( _tracked_properties[i], ": ", parent.get( _tracked_properties[i] ) )
+		%tracked_properties.get_child(i).text \
+			= str( _tracked_properties[i], ": ", _parent.get( _tracked_properties[i] ) )
 
 func _format_position( vec2 : Vector2 ) -> String:
 	var format_string = str('%.0', _position_decimals, 'f')
