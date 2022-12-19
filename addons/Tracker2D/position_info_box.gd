@@ -9,11 +9,11 @@ var _position_decimals : int = 1
 var _rotation_decimals : int = 1
 var _rotation_units : int = Tracker2D.ROTATION_UNITS.Radians
 var _tracked_properties : Array[String] = []
-var _display_rect : bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	%main_panel.size = Vector2.ZERO
+	%rect.set_tracker(_tracker)
 	set_name_visible(_tracker.display_node_name)
 	set_position_visible(_tracker.display_position)
 	set_global_position_visible(_tracker.display_global_position)
@@ -27,8 +27,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
-	if _display_rect && _edit_use_rect():
-		pass
 
 	global_position = get_canvas_transform().affine_inverse() \
 		* _parent.get_canvas_transform() \
@@ -40,7 +38,7 @@ func _process(delta) -> void:
 	update_rotation_value()
 	update_global_rotation_value()
 	update_tracked_properties()
-	
+
 func _draw() -> void:
 	match _market_style:
 		Tracker2D.MARKER_STYLE.Cross:
@@ -67,9 +65,6 @@ func _draw_cross() -> void:
 func set_tracker(value : Tracker2D) -> void:
 	_tracker = value
 	_parent = _tracker.get_parent()
-
-func set_display_rect(value : bool) -> void:
-	_display_rect = value
 
 func set_marker_style(value : Tracker2D.MARKER_STYLE) -> void:
 	_market_style = value

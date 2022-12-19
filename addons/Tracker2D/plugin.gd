@@ -4,6 +4,8 @@ extends EditorPlugin
 #	Tracker2D plugin:
 #		- auto-add Tracker2D based on by group, type or name
 #		- use _edit_use_rect and _edit_get_rect to draw a bounding box
+#			- to draw rect add a canvas layer to the tracker and a node with a custom draw
+#			- add a new Node2D node that can be rotated and scaled
 #		- add window, viewport and screen position options
 #		- use OS.has_feature("standalone") to disable in exported games
 #		- update info based on timer or per frame
