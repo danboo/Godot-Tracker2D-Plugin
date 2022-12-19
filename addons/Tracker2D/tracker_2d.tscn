@@ -14,6 +14,4 @@ display_rotation = null
 display_global_rotation = null
 rotation_units = null
 rotation_decimals = null
-display_node_name = null
-marker_style = null
-display_rect = null
+marker_style = 2

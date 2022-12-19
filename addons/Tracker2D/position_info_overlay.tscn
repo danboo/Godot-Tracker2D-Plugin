@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://addons/Tracker2D/position_info_overlay.gd" id="1_604hk"]
 
 [node name="position_info_overlay" type="CanvasLayer"]
+layer = 128
 script = ExtResource("1_604hk")
 
 [node name="position_info_overlay" type="Control" parent="."]
