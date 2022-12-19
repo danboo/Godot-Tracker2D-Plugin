@@ -9,6 +9,9 @@ script = ExtResource("1_7gmqk")
 [node name="tracked_node" type="Node2D" parent="."]
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(50, 50)
+position = Vector2(200, 200)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_0an67")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
