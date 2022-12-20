@@ -4,13 +4,3 @@
 
 [node name="Tracker2D" type="Node2D" groups=["tracker_2d_nodes"]]
 script = ExtResource("1_yg1mo")
-display_position = null
-display_global_position = null
-display_viewport_position = null
-display_window_position = null
-display_screen_position = null
-position_decimals = null
-display_rotation = null
-display_global_rotation = null
-rotation_units = null
-rotation_decimals = null

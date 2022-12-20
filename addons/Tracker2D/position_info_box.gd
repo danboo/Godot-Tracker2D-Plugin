@@ -106,7 +106,7 @@ func set_global_rotation_visible(value : bool) -> void:
 	%global_rotation_value.visible = value
 
 func update_name_value() -> void:
-	%name_value.text = _parent.name
+	%name_value.text = str( _parent.name, " (", _parent.get_class(), ")")
 
 func update_position_value() -> void:
 	%position_value.text = _format_position(_parent.position)
