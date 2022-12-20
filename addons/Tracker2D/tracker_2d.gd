@@ -28,13 +28,10 @@ enum ROTATION_UNITS { Radians, Degrees }
 
 @onready var _parent : Node = get_parent()
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	Tracker2D_Overlay.add_info_box( self )
-	## give it a reference to tracker and parent
-	## add it to the overlay
-	pass
+	## disable in released games
+	if OS.has_feature("standalone"):
+		queue_free()
+		return
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	Tracker2D_Overlay.add_info_box( self )
