@@ -25,6 +25,8 @@ func _ready() -> void:
 	set_tracked_properties(_tracker.tracked_properties)
 	set_marker_style(_tracker.marker_style)
 
+	_tracker.tree_exiting.connect( func (): queue_free() )
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
 
