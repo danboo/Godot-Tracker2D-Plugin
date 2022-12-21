@@ -21,7 +21,7 @@ enum ROTATION_UNITS { Radians, Degrees }
 @export_range(0, 9, 1) var rotation_decimals : int = 1
 
 @export_group("", "")
-@export var display_node_name : bool = true
+@export var display_name : bool = true
 @export var marker_style : MARKER_STYLE = MARKER_STYLE.Cross
 @export var display_rect : bool = false
 @export var tracked_properties : Array[String]

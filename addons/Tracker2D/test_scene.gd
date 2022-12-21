@@ -14,6 +14,7 @@ func _process(delta):
 
 func test_sprite() -> void:
 	var sprite_tracker : Tracker2D = tracker_scene.instantiate()
+	sprite_tracker.display_rect = true
 	sprite_tracker.tracked_properties = [ "modulate" ]
 	$sprite.add_child( sprite_tracker )
 

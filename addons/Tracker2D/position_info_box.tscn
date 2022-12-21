@@ -51,7 +51,7 @@ offset_bottom = 11.0
 text = "node_name"
 horizontal_alignment = 1
 
-[node name="name_separator" type="HSeparator" parent="main_panel/MarginContainer/VBoxContainer"]
+[node name="position_separator" type="HSeparator" parent="main_panel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 offset_top = 15.0
 offset_right = 109.0
@@ -95,7 +95,7 @@ offset_right = 109.0
 offset_bottom = 26.0
 text = "-111.1, 111.1"
 
-[node name="name_separator2" type="HSeparator" parent="main_panel/MarginContainer/VBoxContainer"]
+[node name="rotation_separator" type="HSeparator" parent="main_panel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 offset_top = 49.0
 offset_right = 109.0
@@ -139,7 +139,7 @@ offset_right = 70.0
 offset_bottom = 26.0
 text = "-123.0"
 
-[node name="name_separator3" type="HSeparator" parent="main_panel/MarginContainer/VBoxContainer"]
+[node name="property_separator" type="HSeparator" parent="main_panel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 offset_top = 83.0
 offset_right = 109.0

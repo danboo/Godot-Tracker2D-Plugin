@@ -12,9 +12,8 @@ var _tracked_properties : Array[String] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	%main_panel.size = Vector2.ZERO
 	%rect.set_tracker(_tracker)
-	set_name_visible(_tracker.display_node_name)
+	set_name_visible(_tracker.display_name)
 	set_position_visible(_tracker.display_position)
 	set_global_position_visible(_tracker.display_global_position)
 	set_position_decimals(_tracker.position_decimals)
@@ -26,6 +25,12 @@ func _ready() -> void:
 	set_marker_style(_tracker.marker_style)
 
 	_tracker.tree_exiting.connect( func (): queue_free() )
+
+	%position_separator.visible = %position_value.visible || %global_position_value.visible
+	%rotation_separator.visible = %rotation_value.visible || %global_rotation_value.visible
+	%property_separator.visible = _tracked_properties.size() > 0
+
+	%main_panel.size = Vector2.ZERO
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
@@ -89,7 +94,6 @@ func set_position_decimals(value : int) -> void:
 
 func set_name_visible(value : bool) -> void:
 	%name_value.visible = value
-	%name_separator.visible = value
 
 func set_position_visible(value : bool) -> void:
 	%position_label.visible = value
