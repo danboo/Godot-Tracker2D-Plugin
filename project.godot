@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot-Tracker2D-Plugin"
-run/main_scene="res://addons/Tracker2D/test_scene.tscn"
+run/main_scene="res://addons/Tracker2D/tests/test_scene.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 

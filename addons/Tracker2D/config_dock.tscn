@@ -13,7 +13,6 @@ grow_vertical = 2
 script = ExtResource("1_jgtn7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -21,59 +20,45 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="name_filter" parent="VBoxContainer" instance=ExtResource("2_34o0b")]
-layout_mode = 2
-
-[node name="label" parent="VBoxContainer/name_filter" index="0"]
-layout_mode = 2
-
-[node name="add_input" parent="VBoxContainer/name_filter" index="1"]
-layout_mode = 2
-
-[node name="delete_button" parent="VBoxContainer/name_filter" index="2"]
-layout_mode = 2
-
-[node name="allow_list" parent="VBoxContainer/name_filter" index="3"]
-layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1152.0
+offset_bottom = 108.0
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
-layout_mode = 2
+offset_top = 112.0
+offset_right = 1152.0
+offset_bottom = 116.0
 
 [node name="group_filter" parent="VBoxContainer" instance=ExtResource("2_34o0b")]
-layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 120.0
+offset_right = 1152.0
+offset_bottom = 228.0
 
 [node name="label" parent="VBoxContainer/group_filter" index="0"]
-layout_mode = 2
 text = "Group Filters:
 "
 
-[node name="add_input" parent="VBoxContainer/group_filter" index="1"]
-layout_mode = 2
-
-[node name="delete_button" parent="VBoxContainer/group_filter" index="2"]
-layout_mode = 2
-
-[node name="allow_list" parent="VBoxContainer/group_filter" index="3"]
-layout_mode = 2
-
 [node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
-layout_mode = 2
+offset_top = 232.0
+offset_right = 1152.0
+offset_bottom = 236.0
 
 [node name="class_filter" parent="VBoxContainer" instance=ExtResource("2_34o0b")]
-layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 240.0
+offset_right = 1152.0
+offset_bottom = 348.0
 
 [node name="label" parent="VBoxContainer/class_filter" index="0"]
-layout_mode = 2
 text = "Class Filters:
 "
-
-[node name="add_input" parent="VBoxContainer/class_filter" index="1"]
-layout_mode = 2
-
-[node name="delete_button" parent="VBoxContainer/class_filter" index="2"]
-layout_mode = 2
-
-[node name="allow_list" parent="VBoxContainer/class_filter" index="3"]
-layout_mode = 2
 
 [editable path="VBoxContainer/name_filter"]
 [editable path="VBoxContainer/group_filter"]
