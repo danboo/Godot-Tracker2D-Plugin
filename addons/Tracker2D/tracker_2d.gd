@@ -9,9 +9,6 @@ enum ROTATION_UNITS { Radians, Degrees }
 @export_group("Position")
 @export var display_position : bool = true
 @export var display_global_position : bool = true
-@export var display_viewport_position : bool = false
-@export var display_window_position : bool = false
-@export var display_screen_position : bool = false
 @export_range(0, 9, 1) var position_decimals : int = 1
 
 @export_group("Rotation")
