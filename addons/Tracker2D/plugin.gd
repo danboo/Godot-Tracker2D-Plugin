@@ -2,6 +2,7 @@
 extends EditorPlugin
 
 #	Tracker2D plugin:
+#       - add a way to configure auto-tracked nodes (repeat tracker2d params in overlay singleton)
 #       - instead of a rect, draw a polyline, antialiased
 #		- add window, viewport and screen position options
 #		- update info based on timer or per frame

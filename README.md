@@ -49,8 +49,25 @@ configure its properties as desired.
 
 ## Tracker2D Configuration
 
+## Auto-Tracking Nodes by Name, Class or Group
 
-## Auto-tracking nodes by name, class or group
+There may be situations where you want to track many nodes that share some characteristic, but
+manually adding a `Tracker2D` instance to each is inconvenient. To help in such a case there is
+support for automatically tracking nodes based on their name, class or groups. This is done by
+monitoring the `SceneTree.node_added` signal and evaluating added nodes against your criteria.
+
+Note that the `node_added` signal only triggers for nodes added dynamically after the game's initial
+scene is fully loaded. Additionally, the class criteria is evaluated against the builtin class of
+the node, *not* a user-defined class if present.
+
+There are a few ways to setup the auto-tracking criteria.
+
+### Auto-tracking UI Configuration
+
+Open "res://addons/Tracker2D/position_info_overlay.tscn", select the root node of the scene, use
+the exported arrays to configure the names, classes and groups you want to track.
+
+![Auto Example](auto-example.png "Auto Example")
 
 ## Changes
 
