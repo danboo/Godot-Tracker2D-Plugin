@@ -2,6 +2,7 @@
 extends EditorPlugin
 
 #	Tracker2D plugin:
+#       - instead of a rect, draw a polyline, antialiased
 #		- add window, viewport and screen position options
 #		- update info based on timer or per frame
 #		- add option to keep info boxes in viewport (change BG color when tracked origin is outside viewport)
