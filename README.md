@@ -1,15 +1,25 @@
 # Tracker2D
 
-A Godot 4.0 plugin that lets you visually track node properties (position, rotation, custom properties).
-
 ## Description
 
-This plugin provides custom node called `Tracker2D` that you can add as a child to a node of
-interest, allowing you to visually monitor its position, rotation and user-specified properties.
+`Tracker2D` is a Godot 4.0 plugin that lets you visually track node position and orientation along
+with a textual representation of various properties. In some respects it is combination of
+`Marker2D` and the "Remote" scene view, but is visible during game execution instead of in the
+editor, and makes the visual association of nodes and their properties immediately apparent.
+
+By default it reports the `position`, `rotation`, `global_position`, and `global_rotation`
+properties, but you can specify an array of user-defined properties to track in addition to the
+defaults.
 
 ### Example
 
 ![Example](example.png "Example")
+
+In the example above, the red-tinted Godot logo has a `Tracker2D` as a child, configured to also
+report the `modulate` value.
+
+The larger, untinted Godot logo is intended to show that the `Tracker2D` information (e.g, the
+bounding box) is drawn on top of the scene, so it won't be occluded by other game visuals.
 
 ## Installation Instructions
 
