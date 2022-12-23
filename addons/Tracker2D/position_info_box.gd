@@ -12,6 +12,8 @@ var _tracked_properties : Array[String] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	process_priority = 1
+
 	%rect.set_tracker(_tracker)
 	set_name_visible(_tracker.display_name)
 	set_position_visible(_tracker.display_position)
