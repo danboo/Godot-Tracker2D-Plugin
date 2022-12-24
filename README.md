@@ -7,9 +7,10 @@ with a textual representation of various properties. In some respects it is comb
 `Marker2D` and the "Remote" scene view, but is visible during game execution instead of in the
 editor, and makes the visual association of nodes and their properties immediately apparent.
 
-By default it reports the `position`, `rotation`, `global_position`, and `global_rotation`
-properties, but you can specify an array of user-defined properties to track in addition to the
-defaults.
+It adds a marker (e.g., a cross) to the origin of the tracked node, draws a bounding box if
+appropriate, and adds an information panel that reports live property values. By default it
+reports the `position`, `rotation`, `global_position`, and `global_rotation` properties,
+but you can specify an array of user-defined properties to track in addition to the defaults.
 
 ### Example
 
@@ -31,7 +32,7 @@ bounding box) is drawn on top of the scene, so it won't be occluded by other gam
 The simplest usage is to instantiate a `Tracker2D` node, configure its properties as desired, and
 add it as a child of a node you want to track.
 
-### Example via scripting:
+### Example via Scripting:
 
 ```gdscript
 var tracker_2d_scene : PackedScene = preload("res://addons/Tracker2D/tracker_2d.tscn")
@@ -62,13 +63,33 @@ the node, *not* a user-defined class if present.
 
 There are a few ways to setup the auto-tracking criteria.
 
-### Auto-tracking UI Configuration
+### Auto-Tracking via UI Configuration
 
 Open "res://addons/Tracker2D/position_info_overlay.tscn", select the root node of the scene, use
 the exported arrays to configure the names, classes and groups you want to track.
 
 ![Auto Example](auto-example.png "Auto Example")
 
+### Auto-Tracking via Scripting
+
+In a `_ready` function of a script loaded during the main scene for your game you can assign a
+list of values to the corresponding arrays for auto-tracking.
+
+```gdscript
+func _ready():
+	Tracker2D_Overlay.auto_track_names = [ "auto_track_test_name" ]
+	Tracker2D_Overlay.auto_track_classes = [ "PointLight2D" ]
+	Tracker2D_Overlay.auto_track_groups = [ "auto_track_test_group" ]
+```
+
 ## Changes
 
 ## TODO
+
+ - add a way to configure displayed properties of auto-tracked nodes (repeat tracker2d params in overlay singleton?)
+ - instead of a rect, draw an antialiased polyline
+ - add window, viewport and screen position options
+ - update info based on timer instead of per frame
+ - add option to keep info boxes in viewport (change BG color when tracked origin is outside viewport)
+ - add test cases:
+ 	- test rect drawing for scaling changes
