@@ -98,7 +98,8 @@ the exported arrays to configure the names, classes and groups you want to track
 ### Auto-Tracking via Scripting
 
 In a `_ready` function of a script loaded during the main scene for your game you can assign a
-list of values to the corresponding arrays for auto-tracking.
+list of values to the corresponding arrays for auto-tracking exposed via the `Tracker2D_Overlay`
+autoload-singleton.
 
 ```gdscript
 func _ready():
