@@ -53,7 +53,27 @@ configure its properties as desired.
 The following configuration properties available on `Tracker2D` nodes and can be customzed via GDScript
 or as exported variables:
 
-#### `display_name` - a `bool`, display the node name when `true`
+`display_name` - a `bool`, display the node name when `true`
+
+`marker_style` - an `enum`, defined as `MARKER_STYLE { Cross, Point, Circle, None }`, `Cross` by default
+
+`display_rect` - a `bool`, display the bounding rectangle when `true`
+
+`tracked_properties` - an `Array[String]`, list the custom node properties to be displayed
+
+`display_position` - a `bool`, display the `position` when `true`
+
+`display_global_position` - a `bool`, display the `global_position` when `true`
+
+`position_decimals` - an `int` in the range of `[0,9]`, number of digits displayed right of the decimal for position values
+
+`display_rotation` - a `bool`, display the `rotation` when `true`
+
+`display_global_rotation` - a `bool`, display the `global_rotation` when `true`
+
+`rotation_decimals` - an `int` in the range of `[0,9]`, number of digits displayed right of the decimal for rotation values
+
+`rotation_units` - an `enum`, defined as `ROTATION_UNITS { Radians, Degrees }`, `Radians` by default
 
 ## Auto-Tracking Nodes by Name, Class or Group
 
