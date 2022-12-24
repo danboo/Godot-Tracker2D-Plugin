@@ -50,6 +50,11 @@ configure its properties as desired.
 
 ## Tracker2D Configuration
 
+The following configuration properties available on `Tracker2D` nodes and can be customzed via GDScript
+or as exported variables:
+
+#### `display_name` - a `bool`, display the node name when `true`
+
 ## Auto-Tracking Nodes by Name, Class or Group
 
 There may be situations where you want to track many nodes that share some characteristic, but
@@ -65,7 +70,7 @@ There are a few ways to setup the auto-tracking criteria.
 
 ### Auto-Tracking via UI Configuration
 
-Open "res://addons/Tracker2D/position_info_overlay.tscn", select the root node of the scene, use
+Open `res://addons/Tracker2D/position_info_overlay.tscn`, select the root node of the scene, use
 the exported arrays to configure the names, classes and groups you want to track.
 
 ![Auto Example](auto-example.png "Auto Example")
